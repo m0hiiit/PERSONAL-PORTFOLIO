@@ -1,0 +1,327 @@
+/** media query start  */
+@media screen and (max-width : 750px) {
+    .all-section {
+        padding: 0px 2rem;
+    }
+
+    .home .all-section {
+        padding: 0px 0px 0px 0rem;
+    }
+
+    #navigation .hamburger {
+        height: 3.125rem;
+        width: 3.125rem;
+        display: inline-block;
+        border: 3px solid var(--main-white-color);
+        border-radius: 35%;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: border .3s ease;
+    }
+
+    #navigation .hamburger .under-line {
+        height: 3px;
+        width: 1.5625rem;
+        position: relative;
+        background: var(--main-white-color);
+        z-index: -1;
+        transition: background .3s ease;
+        border-radius: 50px;
+    }
+
+    #navigation .hamburger .under-line::before,
+    #navigation .hamburger .under-line::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: var(--main-white-color);
+        left: 0;
+        transition: top .3s ease, bottom .3s ease;
+        border-radius: 50px;
+    }
+
+    #navigation .hamburger .under-line::before {
+        bottom: .625rem;
+        width: .9375rem;
+    }
+
+    #navigation .hamburger .under-line::after {
+        top: .625rem;
+        width: 1.25rem;
+    }
+
+    #navigation .hamburger.color-hum {
+        border: 3px solid var(--main-white-color);
+    }
+
+    #navigation .hamburger .under-line.color-hum {
+        background: var(--main-white-color);
+    }
+
+    #navigation .hamburger .under-line.color-hum::before,
+    #navigation .hamburger .under-line.color-hum::after {
+        background: var(--main-white-color);
+    }
+
+    #navigation ul {
+        height: 100vh;
+        width: 100%;
+        left: 100%;
+        top: 0;
+        z-index: 100;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.79);
+        backdrop-filter: saturate(200%) blur(10px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: left .5s ease-in-out;
+    }
+
+    #navigation ul.active {
+        left: 0;
+    }
+
+    #navigation ul li {
+        display: block;
+    }
+
+    #navigation ul li a {
+        display: inline-block;
+        margin: 1.25rem 0;
+        color: var(--main-light-purple-color);
+        font-size: 1.4rem;
+        transition: color .2s ease-in-out, transform .3s ease-in-out;
+    }
+
+    #navigation.sticky-nav ul li a:hover {
+        color: var(--main-white-color);
+    }
+
+    #navigation.sticky-nav ul li a {
+        color: var(--main-light-purple-color);
+    }
+
+    #navigation ul li a:hover {
+        color: var(--main-white-color);
+        transform: scale(1.3);
+    }
+
+
+    #navigation .hamburger.active .under-line::after,
+    #navigation .hamburger.active .under-line::before {
+        top: 0px;
+        bottom: 0px;
+    }
+
+    .home img {
+        display: none;
+    }
+
+    .home .text-home {
+        left: 0%;
+    }
+
+    .home .text-home .first {
+        font-size: 1.5rem;
+    }
+
+    .home .text-home .second {
+        font-size: 5rem;
+    }
+
+    .home .text-home .third {
+        font-size: 2.3rem;
+    }
+
+    .home .text-home .third .web {
+        font-weight: 500;
+        font-size: 2.5rem;
+    }
+
+    /** about */
+    .about .all-section .text-about {
+        justify-content: center;
+    }
+
+    .about .all-section .text-about .right {
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    /** about end */
+}
+
+@media screen and (min-width:544px) and (max-width:670px) {
+    .all-section {
+        padding: 0px 1rem;
+    }
+
+    .home .text-home {
+        left: -2%;
+    }
+
+    .home .text-home .first {
+        font-size: 1.5rem;
+    }
+
+    .home .text-home .second {
+        font-size: 4.5rem;
+    }
+
+    .home .text-home .third {
+        font-size: 2rem;
+    }
+
+    .home .text-home .third .web {
+        font-weight: 500;
+        font-size: 2.2rem;
+    }
+
+    .home .text-home a {
+        padding: .8rem 1.3rem;
+        font-size: 1.3rem;
+        border-radius: 20px;
+        margin-top: .5rem;
+    }
+
+    /* *about start */
+    .about .all-section .text-about {
+        justify-content: center;
+    }
+
+    .about .all-section .text-about .right {
+        width: 100%;
+        margin-top: 2rem;
+        padding: 10px;
+    }
+
+    .about .all-section .text-about .right a {
+        margin-top: .9rem;
+    }
+
+    /* *about end */
+}
+
+@media screen and (max-width : 544px) {
+    .home img {
+        height: 55%;
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        opacity: .15;
+    }
+
+    .home::before {
+        content: '';
+        position: absolute;
+        background: url('./images/home-mainbg.jpg') no-repeat center center/cover;
+        z-index: -11;
+        top: -5rem;
+        filter: hue-rotate(340deg);
+    }
+
+    .home .text-home .first {
+        font-size: 1.3rem;
+    }
+
+    .home .text-home .second {
+        font-size: 4.5rem;
+    }
+
+    .home .text-home .third {
+        font-size: 1.5rem;
+    }
+
+    .home .text-home .third .web {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .home .text-home a {
+        padding: .8rem 1.3rem;
+        font-size: 1.3rem;
+        border-radius: 20px;
+        margin-top: .5rem;
+    }
+
+    /* *about start */
+    .about .all-section .text-about {
+        justify-content: center;
+        margin: 0px;
+    }
+
+    .about .all-section .text-about .right,
+    .service .all-section .service-about .first-service-left,
+    .service .all-section .service-about .second-service-right,
+    .service .all-section .service-about .third-service-left {
+        margin-top: -2rem;
+        width: 100%;
+    }
+
+    .about .all-section .text-about .right a {
+        padding: .4rem .7rem;
+        font-size: .8rem;
+        margin-top: .8rem;
+        border-radius: 10px;
+    }
+
+    .about .all-section .text {
+        font-size: 2.2rem;
+    }
+
+    /** about end */
+
+    /* * service start*/
+    .service .all-section .service-about .first-service-left p,
+    .service .all-section .service-about .second-service-right p,
+    .service .all-section .service-about .third-service-left p {
+        margin-block: -3rem 2rem;
+    }
+    .service .all-section .service-about .second-service-right p{
+        margin-block: -5rem 2rem;
+    }
+    .service .all-section .service-about .third-service-left p{
+        margin-block: 1rem 2rem;
+    }
+    .service .all-section .service-about .first-service-right img{
+        margin-block: -4rem 0rem;;
+    }
+    .service .all-section .service-about .second-service-left img{
+        margin-block: -4rem 0rem;
+    }
+    .service .all-section .service-about .third-service-right img{
+        margin-block: -1rem 0rem;
+    }
+    /* * service end */
+}
+
+/* @media screen and (max-width : 380px) {
+    .home .text-home .first {
+        font-size: 1.2rem;
+    }
+
+    .home .text-home .second {
+        font-size: 3.7rem;
+    }
+
+    .home .text-home .third {
+        font-size: 1.5rem;
+    }
+
+    .home .text-home .third .web {
+        font-weight: 500;
+        font-size: 2rem;
+    }
+} */
+
+/* 
+Design for desktop displays from 1024×768 through 1920×1080.
+Design for mobile displays from 360×640 through 414×896.
+Design for tablet displays from 601×962 through 1280×800.
+*/

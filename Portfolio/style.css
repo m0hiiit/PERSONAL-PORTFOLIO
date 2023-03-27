@@ -1,0 +1,384 @@
+/*! note */
+/*! CSS start after green line comment */
+/*! CSS end before purple line comment */
+
+/*~ imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*~ css reset start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: var(--main-first-purple-color);
+}
+
+/* ~ css reset end */
+/*~ varibales start */
+:root {
+    --main-black-color: #080808;
+    --main-white-color: #fff;
+    --main-first-purple-color: #6934D5;
+    --main-second-purple-color: #362c5f;
+    --main-light-purple-color: #e35bc8;
+    --ubuntu-text: 'Ubuntu', sans-serif;
+    --poppins-text: 'Poppins', sans-serif;
+}
+
+/*~ varibales end */
+
+/* ~ utility classes start*/
+.all-section {
+    max-width: 1400px;
+    padding: 0px 3.125rem;
+    margin: auto;
+}
+
+span {
+    color: var(--main-first-purple-color);
+}
+
+.hamburger {
+    display: none;
+}
+
+/* ~ utility classes end */
+
+/*~ navbar section start */
+#navigation {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    padding: 1.25rem 0px;
+    font-family: var(--ubuntu-text);
+    transition: padding 0.3s ease;
+}
+
+#navigation .all-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#navigation ul {
+    list-style: none;
+}
+
+#navigation li {
+    display: inline-block;
+    list-style: none;
+}
+
+#navigation li a {
+    font-size: 1.1875rem;
+    font-weight: 600;
+    margin-left: 2.8125rem;
+    color: var(--main-white-color);
+    text-decoration: none;
+    transition: color .3s ease-out;
+    cursor: pointer;
+}
+
+#navigation .logo a {
+    font-size: 1.875rem;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    top: -.625rem;
+    color: var(--main-white-color);
+}
+
+#navigation .logo a img {
+    height: 2.5rem;
+    position: relative;
+    top: .4rem;
+}
+
+#navigation.sticky-nav ul li a:hover {
+    color: var(--main-light-purple-color);
+}
+
+#navigation.sticky-nav ul li a {
+    color: var(--main-white-color);
+}
+
+#navigation.sticky-nav {
+    padding-block: .6rem .5rem;
+    background: var(--main-first-purple-color);
+}
+
+#navigation.sticky-nav .logo a {
+    color: var(--main-white-color);
+    position: relative;
+    /* top: -.4rem; */
+}
+
+#navigation.sticky-nav .logo a img {
+    filter: contrast(200%) saturate(200%);
+}
+
+#navigation.sticky-nav ul li a {
+    color: var(--main-white-color);
+}
+
+#navigation ul li a:hover {
+    color: var(--main-black-color);
+}
+
+#navigation .logo a img:hover {
+    filter: contrast(200%) saturate(200%);
+}
+
+/*~ navbar section end */
+
+/* ~ home section start */
+.home {
+    height: 100vh;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    font-family: var(--ubuntu-text);
+    z-index: 2;
+    position: relative;
+    align-items: center;
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    background: url('./images/home-mainbg.jpg') no-repeat center center/cover;
+    z-index: -11;
+    top: -8rem;
+    height: 100%;
+    width: 100%;
+}
+
+.home img {
+    height: 95%;
+    z-index: 2;
+    position: fixed;
+    top: 2.5rem;
+    right: 4rem;
+}
+
+.home .all-section {
+    margin: auto 0px auto 1.875rem;
+}
+
+.home .text-home {
+    position: relative;
+    z-index: 3;
+    left: 30%;
+}
+
+.home .text-home .first {
+    font-size: 2rem;
+    color: var(--main-white-color);
+}
+
+.home .text-home .second {
+    font-size: 6rem;
+    font-weight: 600;
+    margin-left: -3.5px;
+    color: var(--main-white-color);
+}
+
+.home .text-home .third {
+    font-size: 2.5rem;
+    margin: 5px 0px;
+    color: var(--main-white-color);
+}
+
+.home .text-home .third .web {
+    font-weight: 600;
+    font-size: 4rem;
+    color: var(--main-light-purple-color);
+}
+
+.home .text-home a {
+    display: inline-block;
+    background: var(--main-light-purple-color);
+    color: var(--main-white-color);
+    text-decoration: none;
+    padding: .9375rem 1.875rem;
+    font-size: 1.5625rem;
+    font-weight: 500;
+    border: 2px solid var(--main-light-purple-color);
+    border-radius: 18px;
+    margin-top: 1.25rem;
+    text-align: center;
+    font-family: var(--ubuntu-text);
+    transition: all .3s ease-in-out;
+}
+
+.home .text-home a:hover {
+    background: transparent;
+    color: var(--main-light-purple-color);
+}
+
+/* ~ home section end */
+
+
+/* ~about section start */
+.about,
+.service {
+    height: auto;
+    font-family: var(--poppins-text);
+    background: var(--main-white-color);
+    position: relative;
+    z-index: 2;
+}
+
+.about .all-section .text,
+.service .all-section .text {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    padding-block: 0 2rem;
+    position: relative;
+    font-family: var(--ubuntu-text);
+}
+
+.about .all-section .text::before,
+.service .text::before {
+    content: '';
+    position: absolute;
+    width: 11rem;
+    height: 4px;
+    border-radius: 20rem;
+    bottom: 12px;
+    left: 50%;
+    background-color: var(--main-black-color);
+    transform: translateX(-50%);
+    font-family: var(--ubuntu-text);
+}
+
+.about .all-section .text::after,
+.service .text::after {
+    content: 'Who i am';
+    position: absolute;
+    padding: .4rem;
+    bottom: -.28rem;
+    font-size: 1.3rem;
+    left: 50%;
+    color: var(--main-first-purple-color);
+    background-color: var(--main-white-color);
+    transform: translateX(-50%);
+}
+
+.about .all-section .text-about,
+.service .all-section .service-about {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.about .all-section .text-about .right,
+.service .all-section .service-about .first-service-left,
+.service .all-section .service-about .second-service-right,
+.service .all-section .service-about .third-service-left {
+    width: 52%;
+    text-align: justify;
+}
+
+.about .all-section .text-about .left img,
+.service .all-section .service-about .first-service-right img,
+.service .all-section .service-about .second-service-left img,
+.service .all-section .service-about .third-service-right img {
+    height: 500px;
+    width: 100%;
+    object-fit: contain;
+    transform: scaleX(-1);
+}
+
+.right::first-line {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.about .all-section .text-about .right div span {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.about .all-section .text-about .right a {
+    display: inline-block;
+    background: var(--main-first-purple-color);
+    color: var(--main-white-color);
+    text-decoration: none;
+    padding: .5rem .8rem;
+    font-size: 1rem;
+    font-weight: 400;
+    border: 2px solid var(--main-first-purple-color);
+    border-radius: 18px;
+    margin-top: 1rem;
+    text-align: center;
+    font-family: var(--poppins-text);
+    transition: all .3s ease-in-out;
+}
+
+.about .all-section .text-about .right a:hover {
+    background: transparent;
+    color: var(--main-first-purple-color);
+}
+
+/* ~about section end */
+
+/* ~Service section start */
+.service {
+    padding-top: 5rem;
+}
+
+.service .text::after {
+    content: 'What i provide';
+}
+
+.service .text::before {
+    width: 13.5rem;
+}
+
+.service .all-section .service-about-first {
+    flex-wrap: wrap-reverse;
+}
+
+.service .all-section .service-about {
+    background: #f8f8f8;
+    border-radius: 15px;
+}
+.service .all-section .service-about:hover {
+    box-shadow:10px 10px 10px 10px red;
+}
+
+.service .all-section .service-about .first-service-right img {
+    height: 550px;
+    transform: scaleX(1);
+}
+
+.service .all-section .service-about .second-service-left img {
+    height: 550px;
+    transform: scaleX(1);
+}
+
+.service .all-section .service-about .third-service-right img {
+    height: 480px;
+    transform: scaleX(1);
+}
+
+.service .all-section .service-about .first-service-left p,
+.service .all-section .service-about .second-service-right p,
+.service .all-section .service-about .third-service-left p {
+    margin-inline: 1.5rem 1.5rem;
+}
+
+/* ~Service section end */
